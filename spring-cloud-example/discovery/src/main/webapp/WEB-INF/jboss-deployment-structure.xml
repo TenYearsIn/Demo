@@ -1,0 +1,33 @@
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
+	<deployment>
+		<!-- Exclusions allow you to prevent the server from automatically adding 
+			some dependencies -->
+		<exclusions>
+			<module name="org.slf4j" />
+			<module name="org.slf4j.impl" />
+			<module name="org.codehaus.woodstox"/>
+			<module name="org.codehaus.jettison"/>
+			<module name="org.codehaus.jackson.jackson-core-asl"/>
+			<module name="org.codehaus.jackson.jackson-jaxrs"/>
+			<module name="org.codehaus.jackson.jackson-mapper-asl"/>
+			<module name="org.codehaus.jackson.jackson-xc"/>
+			<module name="org.fasterxml.classmate"/>
+			<!--  -->
+			<module name="org.jboss.resteasy.resteasy-jackson-provider"/>
+			<module name="com.fasterxml.jackson.datatype.jackson-datatype-jdk8"/>
+			<module name="com.fasterxml.jackson.datatype.jackson-datatype-jsr310"/>
+			<!-- -->
+			<module name="com.fasterxml.jackson.core.jackson-annotations"/>
+			<module name="com.fasterxml.jackson.core.jackson-databind"/>
+			<module name="com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider"/>
+			<module name="com.fasterxml.jackson.core.jackson-core"/>
+			<module name="org.jboss.resteasy.resteasy-jackson2-provider"/>
+
+			<module name="com.fasterxml.jackson.datatype.jackson-datatype-jsr310"/>
+			<module name="com.fasterxml.jackson.datatype.jackson-datatype-jdk8"/>
+		</exclusions>
+		<exclude-subsystems>
+			<subsystem name="weld"/>
+		</exclude-subsystems>
+	</deployment>
+</jboss-deployment-structure>
