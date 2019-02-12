@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: log
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+  instance:
+    prefer-ip-address: true
+server:
+  port: 8082
+  servlet:
+    context-path: /log
+
+logging:
+  level:
+    org.springframework.web: debug
+    org.springframework.boot.autoconfigure: debug

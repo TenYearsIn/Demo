@@ -24,7 +24,7 @@ public class GatewayApplication extends SpringBootServletInitializer{
 	}
 
 	@Bean
-	UndertowServletWebServerFactory embeddedServletContainerFactory() {
+	public UndertowServletWebServerFactory embeddedServletContainerFactory() {
 		UndertowServletWebServerFactory factory = new UndertowServletWebServerFactory();
 		return factory;
 	}

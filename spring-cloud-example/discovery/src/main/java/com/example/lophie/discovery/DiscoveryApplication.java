@@ -22,7 +22,7 @@ public class DiscoveryApplication extends SpringBootServletInitializer {
         return builder.sources(DiscoveryApplication.class);
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
         SpringApplication.run(DiscoveryApplication.class, args);
     }
 

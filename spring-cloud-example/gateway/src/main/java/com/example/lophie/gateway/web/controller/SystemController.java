@@ -10,7 +10,7 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @EnableAutoConfiguration
-class SystemController {
+public class SystemController {
     /**
      * log
      */

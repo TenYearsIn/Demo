@@ -1,22 +1,18 @@
 server:
-  port: 8081
+  port: 8080
 
 spring:
   cloud:
     gateway:
       discovery:
         locator:
-          enabled: false
+          enabled: true
           lower-case-service-id: true
       routes:
       - id: service_log_route
         uri: lb://log
         predicates:
         - Path=/log/**
-      - id: service_device_route
-        uri: lb://device
-        predicates:
-        - Path=/device/**
 
   application:
     name: gateway
@@ -28,9 +24,11 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://192.168.0.101:8080/eureka/
+      defaultZone: http://localhost:8080/eureka/
+    enabled: true
 
 logging:
   level:
     org.springframework.cloud.gateway: debug
+debug: true
 
